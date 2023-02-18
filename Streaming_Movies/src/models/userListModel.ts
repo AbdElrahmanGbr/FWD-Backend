@@ -27,7 +27,7 @@ export class userListModel {
   async show(id: number): Promise<UserList[]> {
     try {
       const conn = await client.connect();
-      const query = `SELECT * FROM userList where is = ($1);`;
+      const query = `SELECT * FROM userList where id = ($1);`;
       const result = await conn.query(query, [id]);
       conn.release();
       return result.rows;

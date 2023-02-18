@@ -1,6 +1,7 @@
 import client from "../database";
 
 export type MovieList = {
+  id: number;
   userListID: number;
   movieID: number;
   name?: string;
